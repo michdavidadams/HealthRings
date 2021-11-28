@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58FA09BD2753EE6B00BADF1F /* Health_RingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09BC2753EE6B00BADF1F /* Health_RingsApp.swift */; };
+		58FA09BF2753EE6B00BADF1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09BE2753EE6B00BADF1F /* ContentView.swift */; };
+		58FA09C12753EE6E00BADF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FA09C02753EE6E00BADF1F /* Assets.xcassets */; };
+		58FA09C42753EE6E00BADF1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FA09C32753EE6E00BADF1F /* Preview Assets.xcassets */; };
+		58FA09C82753EE6E00BADF1F /* Health Rings WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 58FA09C72753EE6E00BADF1F /* Health Rings WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		58FA09CD2753EE7000BADF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FA09CC2753EE7000BADF1F /* Assets.xcassets */; };
+		58FA09D32753EE7000BADF1F /* Health Rings WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 58FA09D22753EE7000BADF1F /* Health Rings WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		58FA09D82753EE7000BADF1F /* Health_RingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09D72753EE7000BADF1F /* Health_RingsApp.swift */; };
+		58FA09DA2753EE7000BADF1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09D92753EE7000BADF1F /* ContentView.swift */; };
+		58FA09DC2753EE7000BADF1F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09DB2753EE7000BADF1F /* NotificationController.swift */; };
+		58FA09DE2753EE7000BADF1F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09DD2753EE7000BADF1F /* NotificationView.swift */; };
+		58FA09E02753EE7000BADF1F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09DF2753EE7000BADF1F /* ComplicationController.swift */; };
+		58FA09E22753EE7200BADF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FA09E12753EE7200BADF1F /* Assets.xcassets */; };
+		58FA09E52753EE7200BADF1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FA09E42753EE7200BADF1F /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58FA09C92753EE6E00BADF1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58FA09B12753EE6A00BADF1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58FA09C62753EE6E00BADF1F;
+			remoteInfo = "Health Rings WatchKit App";
+		};
+		58FA09D42753EE7000BADF1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58FA09B12753EE6A00BADF1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58FA09D12753EE7000BADF1F;
+			remoteInfo = "Health Rings WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58FA09ED2753EE7200BADF1F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				58FA09D32753EE7000BADF1F /* Health Rings WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FA09F12753EE7200BADF1F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				58FA09C82753EE6E00BADF1F /* Health Rings WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		58FA09B92753EE6B00BADF1F /* Health Rings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Rings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FA09BC2753EE6B00BADF1F /* Health_RingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health_RingsApp.swift; sourceTree = "<group>"; };
+		58FA09BE2753EE6B00BADF1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		58FA09C02753EE6E00BADF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58FA09C32753EE6E00BADF1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58FA09C72753EE6E00BADF1F /* Health Rings WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Rings WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FA09CC2753EE7000BADF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58FA09D22753EE7000BADF1F /* Health Rings WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Health Rings WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58FA09D72753EE7000BADF1F /* Health_RingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health_RingsApp.swift; sourceTree = "<group>"; };
+		58FA09D92753EE7000BADF1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		58FA09DB2753EE7000BADF1F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		58FA09DD2753EE7000BADF1F /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		58FA09DF2753EE7000BADF1F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		58FA09E12753EE7200BADF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58FA09E42753EE7200BADF1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58FA09E62753EE7200BADF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58FA09E72753EE7200BADF1F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58FA09B62753EE6B00BADF1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FA09CF2753EE7000BADF1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58FA09B02753EE6A00BADF1F = {
+			isa = PBXGroup;
+			children = (
+				58FA09BB2753EE6B00BADF1F /* Health Rings */,
+				58FA09CB2753EE6E00BADF1F /* Health Rings WatchKit App */,
+				58FA09D62753EE7000BADF1F /* Health Rings WatchKit Extension */,
+				58FA09BA2753EE6B00BADF1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58FA09BA2753EE6B00BADF1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58FA09B92753EE6B00BADF1F /* Health Rings.app */,
+				58FA09C72753EE6E00BADF1F /* Health Rings WatchKit App.app */,
+				58FA09D22753EE7000BADF1F /* Health Rings WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58FA09BB2753EE6B00BADF1F /* Health Rings */ = {
+			isa = PBXGroup;
+			children = (
+				58FA09BC2753EE6B00BADF1F /* Health_RingsApp.swift */,
+				58FA09BE2753EE6B00BADF1F /* ContentView.swift */,
+				58FA09C02753EE6E00BADF1F /* Assets.xcassets */,
+				58FA09C22753EE6E00BADF1F /* Preview Content */,
+			);
+			path = "Health Rings";
+			sourceTree = "<group>";
+		};
+		58FA09C22753EE6E00BADF1F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				58FA09C32753EE6E00BADF1F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58FA09CB2753EE6E00BADF1F /* Health Rings WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				58FA09CC2753EE7000BADF1F /* Assets.xcassets */,
+			);
+			path = "Health Rings WatchKit App";
+			sourceTree = "<group>";
+		};
+		58FA09D62753EE7000BADF1F /* Health Rings WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				58FA09D72753EE7000BADF1F /* Health_RingsApp.swift */,
+				58FA09D92753EE7000BADF1F /* ContentView.swift */,
+				58FA09DB2753EE7000BADF1F /* NotificationController.swift */,
+				58FA09DD2753EE7000BADF1F /* NotificationView.swift */,
+				58FA09DF2753EE7000BADF1F /* ComplicationController.swift */,
+				58FA09E12753EE7200BADF1F /* Assets.xcassets */,
+				58FA09E62753EE7200BADF1F /* Info.plist */,
+				58FA09E72753EE7200BADF1F /* PushNotificationPayload.apns */,
+				58FA09E32753EE7200BADF1F /* Preview Content */,
+			);
+			path = "Health Rings WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		58FA09E32753EE7200BADF1F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				58FA09E42753EE7200BADF1F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58FA09B82753EE6B00BADF1F /* Health Rings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58FA09F22753EE7200BADF1F /* Build configuration list for PBXNativeTarget "Health Rings" */;
+			buildPhases = (
+				58FA09B52753EE6B00BADF1F /* Sources */,
+				58FA09B62753EE6B00BADF1F /* Frameworks */,
+				58FA09B72753EE6B00BADF1F /* Resources */,
+				58FA09F12753EE7200BADF1F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58FA09CA2753EE6E00BADF1F /* PBXTargetDependency */,
+			);
+			name = "Health Rings";
+			productName = "Health Rings";
+			productReference = 58FA09B92753EE6B00BADF1F /* Health Rings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58FA09C62753EE6E00BADF1F /* Health Rings WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58FA09EE2753EE7200BADF1F /* Build configuration list for PBXNativeTarget "Health Rings WatchKit App" */;
+			buildPhases = (
+				58FA09C52753EE6E00BADF1F /* Resources */,
+				58FA09ED2753EE7200BADF1F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58FA09D52753EE7000BADF1F /* PBXTargetDependency */,
+			);
+			name = "Health Rings WatchKit App";
+			productName = "Health Rings WatchKit App";
+			productReference = 58FA09C72753EE6E00BADF1F /* Health Rings WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		58FA09D12753EE7000BADF1F /* Health Rings WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58FA09EA2753EE7200BADF1F /* Build configuration list for PBXNativeTarget "Health Rings WatchKit Extension" */;
+			buildPhases = (
+				58FA09CE2753EE7000BADF1F /* Sources */,
+				58FA09CF2753EE7000BADF1F /* Frameworks */,
+				58FA09D02753EE7000BADF1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Health Rings WatchKit Extension";
+			productName = "Health Rings WatchKit Extension";
+			productReference = 58FA09D22753EE7000BADF1F /* Health Rings WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58FA09B12753EE6A00BADF1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					58FA09B82753EE6B00BADF1F = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					58FA09C62753EE6E00BADF1F = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					58FA09D12753EE7000BADF1F = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 58FA09B42753EE6A00BADF1F /* Build configuration list for PBXProject "Health Rings" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58FA09B02753EE6A00BADF1F;
+			productRefGroup = 58FA09BA2753EE6B00BADF1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58FA09B82753EE6B00BADF1F /* Health Rings */,
+				58FA09C62753EE6E00BADF1F /* Health Rings WatchKit App */,
+				58FA09D12753EE7000BADF1F /* Health Rings WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58FA09B72753EE6B00BADF1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FA09C42753EE6E00BADF1F /* Preview Assets.xcassets in Resources */,
+				58FA09C12753EE6E00BADF1F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FA09C52753EE6E00BADF1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FA09CD2753EE7000BADF1F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FA09D02753EE7000BADF1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FA09E52753EE7200BADF1F /* Preview Assets.xcassets in Resources */,
+				58FA09E22753EE7200BADF1F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58FA09B52753EE6B00BADF1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FA09BF2753EE6B00BADF1F /* ContentView.swift in Sources */,
+				58FA09BD2753EE6B00BADF1F /* Health_RingsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58FA09CE2753EE7000BADF1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58FA09DC2753EE7000BADF1F /* NotificationController.swift in Sources */,
+				58FA09DA2753EE7000BADF1F /* ContentView.swift in Sources */,
+				58FA09E02753EE7000BADF1F /* ComplicationController.swift in Sources */,
+				58FA09D82753EE7000BADF1F /* Health_RingsApp.swift in Sources */,
+				58FA09DE2753EE7000BADF1F /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58FA09CA2753EE6E00BADF1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58FA09C62753EE6E00BADF1F /* Health Rings WatchKit App */;
+			targetProxy = 58FA09C92753EE6E00BADF1F /* PBXContainerItemProxy */;
+		};
+		58FA09D52753EE7000BADF1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58FA09D12753EE7000BADF1F /* Health Rings WatchKit Extension */;
+			targetProxy = 58FA09D42753EE7000BADF1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		58FA09E82753EE7200BADF1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		58FA09E92753EE7200BADF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		58FA09EB2753EE7200BADF1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Rings WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 5SVL2L4EZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Health Rings WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Rings WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michdavidadams.Health-Rings.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		58FA09EC2753EE7200BADF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Rings WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 5SVL2L4EZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Health Rings WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Rings WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michdavidadams.Health-Rings.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		58FA09EF2753EE7200BADF1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SVL2L4EZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Health_Rings_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Rings WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.michdavidadams.Health-Rings";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michdavidadams.Health-Rings.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		58FA09F02753EE7200BADF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SVL2L4EZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Health_Rings_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Rings WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.michdavidadams.Health-Rings";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michdavidadams.Health-Rings.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		58FA09F32753EE7200BADF1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Rings/Preview Content\"";
+				DEVELOPMENT_TEAM = 5SVL2L4EZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michdavidadams.Health-Rings";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58FA09F42753EE7200BADF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Rings/Preview Content\"";
+				DEVELOPMENT_TEAM = 5SVL2L4EZ6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michdavidadams.Health-Rings";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58FA09B42753EE6A00BADF1F /* Build configuration list for PBXProject "Health Rings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58FA09E82753EE7200BADF1F /* Debug */,
+				58FA09E92753EE7200BADF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58FA09EA2753EE7200BADF1F /* Build configuration list for PBXNativeTarget "Health Rings WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58FA09EB2753EE7200BADF1F /* Debug */,
+				58FA09EC2753EE7200BADF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58FA09EE2753EE7200BADF1F /* Build configuration list for PBXNativeTarget "Health Rings WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58FA09EF2753EE7200BADF1F /* Debug */,
+				58FA09F02753EE7200BADF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58FA09F22753EE7200BADF1F /* Build configuration list for PBXNativeTarget "Health Rings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58FA09F32753EE7200BADF1F /* Debug */,
+				58FA09F42753EE7200BADF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58FA09B12753EE6A00BADF1F /* Project object */;
+}
