@@ -12,5 +12,9 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>For writing health data</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>For retrieving health data.</string>
 </dict>
 </plist>
