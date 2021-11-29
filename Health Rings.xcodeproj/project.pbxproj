@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		588F3F81275458F6002FFE5D /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F3F80275458F6002FFE5D /* RingView.swift */; };
+		588F3F8327545A72002FFE5D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F3F8227545A72002FFE5D /* Constants.swift */; };
+		588F3F8527545C2A002FFE5D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F3F8427545C29002FFE5D /* ColorExtension.swift */; };
+		588F3F8827545D33002FFE5D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F3F8727545D33002FFE5D /* BlurView.swift */; };
 		58FA09BD2753EE6B00BADF1F /* Health_RingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09BC2753EE6B00BADF1F /* Health_RingsApp.swift */; };
 		58FA09BF2753EE6B00BADF1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FA09BE2753EE6B00BADF1F /* ContentView.swift */; };
 		58FA09C12753EE6E00BADF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58FA09C02753EE6E00BADF1F /* Assets.xcassets */; };
@@ -68,6 +72,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		588F3F80275458F6002FFE5D /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		588F3F8227545A72002FFE5D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		588F3F8427545C29002FFE5D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		588F3F8727545D33002FFE5D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		58FA09B92753EE6B00BADF1F /* Health Rings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Rings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FA09BC2753EE6B00BADF1F /* Health_RingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health_RingsApp.swift; sourceTree = "<group>"; };
 		58FA09BE2753EE6B00BADF1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		588F3F8627545D0D002FFE5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58FA09BE2753EE6B00BADF1F /* ContentView.swift */,
+				588F3F80275458F6002FFE5D /* RingView.swift */,
+				588F3F8727545D33002FFE5D /* BlurView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		58FA09B02753EE6A00BADF1F = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +153,9 @@
 			children = (
 				58FA09F52753EFAE00BADF1F /* Health Rings.entitlements */,
 				58FA09BC2753EE6B00BADF1F /* Health_RingsApp.swift */,
-				58FA09BE2753EE6B00BADF1F /* ContentView.swift */,
+				588F3F8627545D0D002FFE5D /* Views */,
+				588F3F8427545C29002FFE5D /* ColorExtension.swift */,
+				588F3F8227545A72002FFE5D /* Constants.swift */,
 				58FA09FB2753F39D00BADF1F /* HealthStore.swift */,
 				58FA09C02753EE6E00BADF1F /* Assets.xcassets */,
 				58FA09C22753EE6E00BADF1F /* Preview Content */,
@@ -322,7 +342,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588F3F8827545D33002FFE5D /* BlurView.swift in Sources */,
+				588F3F8327545A72002FFE5D /* Constants.swift in Sources */,
+				588F3F81275458F6002FFE5D /* RingView.swift in Sources */,
 				58FA09BF2753EE6B00BADF1F /* ContentView.swift in Sources */,
+				588F3F8527545C2A002FFE5D /* ColorExtension.swift in Sources */,
 				58FA09FC2753F39D00BADF1F /* HealthStore.swift in Sources */,
 				58FA09BD2753EE6B00BADF1F /* Health_RingsApp.swift in Sources */,
 			);
