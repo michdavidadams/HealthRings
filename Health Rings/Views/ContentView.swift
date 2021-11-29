@@ -13,95 +13,45 @@ struct ContentView: View {
     var standard = HKQuantity(unit: HKUnit(from: ""), doubleValue: 0.0)
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .top) {
-                Color.black.edgesIgnoringSafeArea(.all)
-                ScrollView {
-                    ZStack {
-                        RingView(
-                            percentage: healthStore.waterPercentage ?? 1,
-                            backgroundColor: Color.standRingBackground,
-                            startColor: Color.standRingStartColor,
-                            endColor: Color.standRingEndColor,
-                            thickness: Constants.mainRingThickness
-                        )
-                            .frame(width: 150, height: 150)
-                            .aspectRatio(contentMode: .fit)
-                        RingView(
-                            percentage: healthStore.stepsPercentage ?? 0,
-                            backgroundColor: Color.exerciseRingBackground,
-                            startColor: Color.exerciseRingStartColor,
-                            endColor: Color.exerciseRingEndColor,
-                            thickness: Constants.mainRingThickness
-                        )
-                            .frame(width: 215, height: 215)
-                            .aspectRatio(contentMode: .fit)
-                        RingView(
-                            percentage: healthStore.energyPercentage ?? 0,
-                            backgroundColor: Color.moveRingBackground,
-                            startColor: Color.moveRingStartColor,
-                            endColor: Color.moveRingEndColor,
-                            thickness: Constants.mainRingThickness
-                        )
-                            .frame(width: 280, height: 280)
-                            .aspectRatio(contentMode: .fit)
-                    }
-                    
+        VStack {
+            ZStack {
+                Group {
+                    PercentageRing(
+                        ringWidth: 35, percent: healthStore.energyPercentage ?? 0 ,
+                        backgroundColor: nutritionGreenOne.opacity(0.2),
+                        foregroundColors: [nutritionGreenOne, nutritionGreenTwo]
+                    )
+                        .frame(width: 300, height: 300)
+                        .previewLayout(.sizeThatFits)
                 }
-            }.onAppear {
-                healthStore.setUpHealthStore()
-                healthStore.calculateSteps()
-                healthStore.calculateEnergies()
-                healthStore.calculateWater()
+                Group {
+                    PercentageRing(
+                        ringWidth: 35, percent: healthStore.stepsPercentage ?? 0 ,
+                        backgroundColor: activityRedOne.opacity(0.2),
+                        foregroundColors: [activityRedOne, .orange]
+                    )
+                        .frame(width: 220, height: 220)
+                        .previewLayout(.sizeThatFits)
+                }
+                Group {
+                    PercentageRing(
+                        ringWidth: 35, percent: healthStore.waterPercentage ?? 0 ,
+                        backgroundColor: nutritionGrayOne.opacity(0.2),
+                        foregroundColors: [nutritionGrayOne, nutritionGreenOne]
+                    )
+                        .frame(width: 140, height: 140)
+                        .previewLayout(.sizeThatFits)
+                }
             }
-            
-            //        VStack {
-            //            Text("Steps: \(healthStore.stepsValue ?? standard)")
-            //            Text("Energy: \(healthStore.energyTotal.rounded(), specifier: "%.0f")")
-            //            Text("Energy: \(healthStore.waterValue ?? standard)")
-            //        }.onAppear {
-            //            healthStore.setUpHealthStore()
-            //        }
+            Text("Energy: \(healthStore.energyTotal)")
+            Text("Steps: \(healthStore.stepsValue ?? standard)")
+            Text("Water: \(healthStore.waterValue?.doubleValue(for: .fluidOunceUS()) ?? 0)")
+        }.onAppear {
+            healthStore.setUpHealthStore()
         }
-        
-        
-        //    func createRings() -> some View {
-        //
-        //        ZStack {
-        //            RingView(
-        //                percentage: healthStore.waterPercentage ?? 1,
-        //                backgroundColor: Color.standRingBackground,
-        //                startColor: Color.standRingStartColor,
-        //                endColor: Color.standRingEndColor,
-        //                thickness: Constants.mainRingThickness
-        //            )
-        //                .frame(width: 150, height: 150)
-        //                .aspectRatio(contentMode: .fit)
-        //            RingView(
-        //                percentage: healthStore.stepsPercentage ?? 0,
-        //                backgroundColor: Color.exerciseRingBackground,
-        //                startColor: Color.exerciseRingStartColor,
-        //                endColor: Color.exerciseRingEndColor,
-        //                thickness: Constants.mainRingThickness
-        //            )
-        //                .frame(width: 215, height: 215)
-        //                .aspectRatio(contentMode: .fit)
-        //            RingView(
-        //                percentage: healthStore.energyPercentage ?? 0,
-        //                backgroundColor: Color.moveRingBackground,
-        //                startColor: Color.moveRingStartColor,
-        //                endColor: Color.moveRingEndColor,
-        //                thickness: Constants.mainRingThickness
-        //            )
-        //                .frame(width: 280, height: 280)
-        //                .aspectRatio(contentMode: .fit)
-        //        }.onTapGesture {
-        //            healthStore.calculateSteps()
-        //            healthStore.calculateEnergies()
-        //            healthStore.calculateWater()
-        //        }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
