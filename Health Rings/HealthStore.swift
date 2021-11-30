@@ -14,24 +14,19 @@ class HealthStore: ObservableObject {
     
     // Steps
     @Published var stepsValue: HKQuantity?
-    @Published var stepsPercentage: Double?
     
     //Energy
     @Published var dietaryValue: HKQuantity?
     @Published var activeValue: HKQuantity?
     @Published var restingValue: HKQuantity?
-    @Published var energyTotal: Double
-    @Published var energyPercentage: Double?
     
     // Water
     @Published var waterValue: HKQuantity?
-    @Published var waterPercentage: Double?
     
     init() {
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore()
         }
-        energyTotal = 0
     }
     
     func setUpHealthStore() {
@@ -74,7 +69,6 @@ class HealthStore: ObservableObject {
             query, statistics, error in
             DispatchQueue.main.async{
                 self.stepsValue = statistics?.sumQuantity()
-                self.stepsPercentage = (statistics?.sumQuantity()?.doubleValue(for: .count()) ?? 0) / 100
                 print("----> calculateSteps statistics: \(String(describing: statistics))")
                 print("----> calculateSteps error: \(String(describing: error))")
                 print("----> calculateSteps: \(String(describing: self.stepsValue))")
@@ -114,8 +108,6 @@ class HealthStore: ObservableObject {
             query, statistics, error in
             DispatchQueue.main.async{
                 self.dietaryValue = statistics?.sumQuantity()
-                self.energyTotal += statistics?.sumQuantity()?.doubleValue(for: .kilocalorie()) ?? 0
-                self.energyPercentage = self.energyTotal / 100
                 print("----> dietary energy statistics: \(String(describing: statistics))")
                 print("----> dietary energy error: \(String(describing: error))")
                 print("----> dietary energy: \(String(describing: self.dietaryValue))")
@@ -130,8 +122,6 @@ class HealthStore: ObservableObject {
             query, statistics, error in
             DispatchQueue.main.async{
                 self.activeValue = statistics?.sumQuantity()
-                self.energyTotal += statistics?.sumQuantity()?.doubleValue(for: .kilocalorie()) ?? 0
-                self.energyPercentage = self.energyTotal / 100
                 print("----> active energy statistics: \(String(describing: statistics))")
                 print("----> active energy error: \(String(describing: error))")
                 print("----> active energy: \(String(describing: self.activeValue))")
@@ -146,8 +136,6 @@ class HealthStore: ObservableObject {
             query, statistics, error in
             DispatchQueue.main.async{
                 self.restingValue = statistics?.sumQuantity()
-                self.energyTotal += statistics?.sumQuantity()?.doubleValue(for: .kilocalorie()) ?? 0
-                self.energyPercentage = self.energyTotal / 100
                 print("----> resting energy statistics: \(String(describing: statistics))")
                 print("----> resting energy error: \(String(describing: error))")
                 print("----> resting energy: \(String(describing: self.restingValue))")
@@ -178,7 +166,6 @@ class HealthStore: ObservableObject {
             query, statistics, error in
             DispatchQueue.main.async{
                 self.waterValue = statistics?.sumQuantity()
-                self.waterPercentage = (statistics?.sumQuantity()?.doubleValue(for: .fluidOunceImperial()) ?? 0) / 100
                 print("----> water statistics: \(String(describing: statistics))")
                 print("----> water error: \(String(describing: error))")
                 print("----> water: \(String(describing: self.waterValue))")

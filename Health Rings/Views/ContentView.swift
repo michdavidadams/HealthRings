@@ -11,13 +11,14 @@ import HealthKit
 struct ContentView: View {
     @ObservedObject var healthStore = HealthStore()
     var standard = HKQuantity(unit: HKUnit(from: ""), doubleValue: 0.0)
+//    @State var energyTotal = ((healthStore.activeValue?.doubleValue(for: .kilocalorie())) ?? 0 + (healthStore.restingValue?.doubleValue(for: .kilocalorie()) ?? 0) - (healthStore.dietaryValue?.doubleValue(for: .kilocalorie()) ?? 0)
     
     var body: some View {
         VStack {
             ZStack {
                 Group {
                     PercentageRing(
-                        ringWidth: 35, percent: healthStore.energyPercentage ?? 0 ,
+                        ringWidth: 35, percent: (healthStore.dietaryValue?.doubleValue(for: .kilocalorie()) ?? 0) / 2000.00,
                         backgroundColor: nutritionGreenOne.opacity(0.2),
                         foregroundColors: [nutritionGreenOne, nutritionGreenTwo]
                     )
@@ -26,7 +27,7 @@ struct ContentView: View {
                 }
                 Group {
                     PercentageRing(
-                        ringWidth: 35, percent: healthStore.stepsPercentage ?? 0 ,
+                        ringWidth: 35, percent: healthStore.stepsValue?.doubleValue(for: .count()) ?? 0 / 10000.00,
                         backgroundColor: activityRedOne.opacity(0.2),
                         foregroundColors: [activityRedOne, .orange]
                     )
@@ -35,7 +36,7 @@ struct ContentView: View {
                 }
                 Group {
                     PercentageRing(
-                        ringWidth: 35, percent: healthStore.waterPercentage ?? 0 ,
+                        ringWidth: 35, percent: healthStore.waterValue?.doubleValue(for: .fluidOunceUS()) ?? 0 / 80.00,
                         backgroundColor: nutritionGrayOne.opacity(0.2),
                         foregroundColors: [nutritionGrayOne, nutritionGreenOne]
                     )
@@ -43,7 +44,7 @@ struct ContentView: View {
                         .previewLayout(.sizeThatFits)
                 }
             }
-            Text("Energy: \(healthStore.energyTotal)")
+            Text("Energy: \(healthStore.dietaryValue?.doubleValue(for: .kilocalorie()) ?? 0)")
             Text("Steps: \(healthStore.stepsValue ?? standard)")
             Text("Water: \(healthStore.waterValue?.doubleValue(for: .fluidOunceUS()) ?? 0)")
         }.onAppear {
