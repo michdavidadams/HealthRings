@@ -7,29 +7,18 @@
 
 import SwiftUI
 
-// Activity
-let activityRedOne = Color("Activity/Red 1")
+// Blue
+let blueOne = Color("Blue 1")
+let blueTwo = Color("Blue 2")
 
-// Body
-let bodyPurpleOne = Color("Body/Purple 1")
+// Green
+let greenOne = Color("Green 1")
+let greenTwo = Color("Green 2")
 
-// Heart
-let heartPinkOne = Color("Heart/Pink 1")
-let heartPinkTwo = Color("Heart/Pink 2")
+// Pink
+let pinkOne = Color("Pink 1")
+let pinkTwo = Color("Pink 2")
 
-// Mindfulness
-let mindfulnessBlueOne = Color("Mindfulness/Blue 1")
-
-// Nutrition
-let nutritionGreenOne = Color("Nutrition/Green 1")
-let nutritionGreenTwo = Color("Nutrition/Green 2")
-let nutritionGrayOne = Color("Nutrition/Gray 1")
-
-// Other
-let otherOne = Color("Other/Blue 1")
-let otherTwo = Color("Other/Blue 2")
-let otherThree = Color("Other/Blue 3")
-
-// Sleep
-let sleepBlueOne = Color("Sleep/Blue 1")
-let sleepBlueTwo = Color("Sleep/Blue 2")
+// Yellow
+let yellowOne = Color("Yellow 1")
+let yellowTwo = Color("Yellow 2")
