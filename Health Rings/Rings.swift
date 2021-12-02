@@ -41,8 +41,8 @@ struct ActivityRingView: View {
         ZStack {
             Image(systemName: "\(iconName)")
                 .foregroundColor(Color.black)
-                .font(.system(size: 20, weight: .bold))
-                .frame(width: 30.0, height: 30.0)
+                .font(.system(size: 10, weight: .bold))
+                .frame(width: 15.0, height: 15.0)
                 .padding(.bottom, (ringRadius * 2))
                 .zIndex(1)
             

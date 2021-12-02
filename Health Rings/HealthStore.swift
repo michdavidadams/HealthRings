@@ -15,13 +15,19 @@ class HealthStore: ObservableObject {
     // Steps
     @Published var stepsValue: HKQuantity?
     
-    //Energy
+    // Energy
     @Published var dietaryValue: HKQuantity?
     @Published var activeValue: HKQuantity?
     @Published var restingValue: HKQuantity?
     
     // Water
     @Published var waterValue: HKQuantity?
+    
+    // Protein
+    @Published var proteinValue: HKQuantity?
+    
+    // Fiber
+    @Published var fiberValue: HKQuantity?
     
     init() {
         if HKHealthStore.isHealthDataAvailable() {
@@ -35,7 +41,9 @@ class HealthStore: ObservableObject {
             HKQuantityType.quantityType(forIdentifier: .dietaryEnergyConsumed)!,
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
             HKQuantityType.quantityType(forIdentifier: .basalEnergyBurned)!,
-            HKQuantityType.quantityType(forIdentifier: .dietaryWater)!
+            HKQuantityType.quantityType(forIdentifier: .dietaryWater)!,
+            HKQuantityType.quantityType(forIdentifier: .dietaryProtein)!,
+            HKQuantityType.quantityType(forIdentifier: .dietaryFiber)!
         ]
         healthStore?.requestAuthorization(toShare: nil, read: typesToRead, completion: { success, error in
             if success {
@@ -43,6 +51,8 @@ class HealthStore: ObservableObject {
                 self.calculateSteps()
                 self.calculateEnergies()
                 self.calculateWater()
+                self.calculateProtein()
+                self.calculateFiber()
             }
         })
     }
@@ -169,6 +179,66 @@ class HealthStore: ObservableObject {
                 print("----> water statistics: \(String(describing: statistics))")
                 print("----> water error: \(String(describing: error))")
                 print("----> water: \(String(describing: self.waterValue))")
+            }
+        }
+        healthStore!.execute(query!)
+    }
+    
+    // MARK: - Calculate protein intake
+    func calculateProtein() {
+        guard let protein = HKObjectType.quantityType(forIdentifier: .dietaryProtein) else {
+            // This should never fail when using a defined constant.
+            fatalError("*** Unable to get the protein intake count ***")
+        }
+        
+        // Today predicate
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(
+            withStart: startOfDay,
+            end: now,
+            options: .strictStartDate
+        )
+        
+        query = HKStatisticsQuery(quantityType: protein,
+                                  quantitySamplePredicate: predicate,
+                                  options: .cumulativeSum) {
+            query, statistics, error in
+            DispatchQueue.main.async{
+                self.proteinValue = statistics?.sumQuantity()
+                print("----> protein statistics: \(String(describing: statistics))")
+                print("----> protein error: \(String(describing: error))")
+                print("----> protein: \(String(describing: self.proteinValue))")
+            }
+        }
+        healthStore!.execute(query!)
+    }
+    
+    // MARK: - Calculate fiber intake
+    func calculateFiber() {
+        guard let fiber = HKObjectType.quantityType(forIdentifier: .dietaryFiber) else {
+            // This should never fail when using a defined constant.
+            fatalError("*** Unable to get the fiber intake count ***")
+        }
+        
+        // Today predicate
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(
+            withStart: startOfDay,
+            end: now,
+            options: .strictStartDate
+        )
+        
+        query = HKStatisticsQuery(quantityType: fiber,
+                                  quantitySamplePredicate: predicate,
+                                  options: .cumulativeSum) {
+            query, statistics, error in
+            DispatchQueue.main.async{
+                self.fiberValue = statistics?.sumQuantity()
+                print("----> fiber statistics: \(String(describing: statistics))")
+                print("----> fiber error: \(String(describing: error))")
+                print("----> fiber: \(String(describing: self.fiberValue))")
             }
         }
         healthStore!.execute(query!)
