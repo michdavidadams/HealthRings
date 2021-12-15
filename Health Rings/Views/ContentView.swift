@@ -13,6 +13,9 @@ struct ContentView: View {
     var standard = HKQuantity(unit: HKUnit(from: ""), doubleValue: 0.0)
     //    @State var energyTotal = ((healthStore.activeValue?.doubleValue(for: .kilocalorie())) ?? 0 + (healthStore.restingValue?.doubleValue(for: .kilocalorie()) ?? 0) - (healthStore.dietaryValue?.doubleValue(for: .kilocalorie()) ?? 0)
     
+    // Detect dark mode
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         ScrollView {
             
@@ -36,7 +39,9 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         VStack(alignment: .leading) {
                             Text("Energy")
-                                .font(.subheadline)
+                                .font(.headline)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color.white)
                             HStack {
                                 Text("\(String(format: "%.0f", (healthStore.dietaryValue?.doubleValue(for: .kilocalorie()) ?? 0).rounded()))/2000")
                                     .font(.title)
@@ -51,7 +56,10 @@ struct ContentView: View {
                         
                         VStack(alignment: .leading) {
                             Text("Protein")
-                                .font(.subheadline)
+                                .font(.headline)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color.white)
+                            
                             HStack {
                                 Text("\(String(format: "%.0f", (healthStore.proteinValue?.doubleValue(for: .gram()) ?? 0).rounded()))/115")
                                     .font(.title)
@@ -66,7 +74,9 @@ struct ContentView: View {
                         
                         VStack(alignment: .leading) {
                             Text("Water")
-                                .font(.subheadline)
+                                .font(.headline)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color.white)
                             HStack {
                                 Text("\(String(format: "%.0f", (healthStore.waterValue?.doubleValue(for: .fluidOunceUS()) ?? 0).rounded()))/80")
                                     .font(.title)
@@ -103,12 +113,11 @@ struct ContentView: View {
                         
                     }
                     .padding()
-                    //.frame(height:200)
                     Spacer()//.frame(height:50)
                     
                 }
                 .frame(width: 370.0, height: 200)
-                .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.286, opacity: 0.38))
+                .background(colorScheme == .dark ? Color.gray : Color.black)
                 .cornerRadius(10.0)
             }
             
